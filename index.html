@@ -46,7 +46,7 @@
       {
         "@type": "ContactPoint",
         "telephone": "+16156276379",
-        "contactType": "Recruiting Chair",
+        "contactType": "Committee Chair",
         "name": "Keith Tennant"
       }
     ]
@@ -196,24 +196,51 @@
       line-height: 1.4;
     }
 
-    /* Events */
-    .events-list { list-style: none; }
-    .events-list li {
+    /* Event cards */
+    .event-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 1.25rem;
+    }
+    .event-card {
+      background: #0d2b5e;
+      border-radius: 10px;
+      padding: 16px 14px 14px;
       display: flex;
-      gap: 14px;
-      padding: 9px 0;
-      border-bottom: 1px solid #e5e8ed;
-      font-size: 14px;
-      align-items: flex-start;
+      flex-direction: column;
+      gap: 6px;
     }
-    .events-list li:last-child { border-bottom: none; }
-    .event-date {
-      min-width: 76px;
-      color: #6b7280;
+    .event-card.wide { grid-column: span 2; flex-direction: row; align-items: center; gap: 14px; }
+    .event-icon { font-size: 26px; line-height: 1; }
+    .event-card-name {
       font-size: 13px;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.35;
     }
-    .event-name { color: #1a1a1a; line-height: 1.4; }
-    .event-special { font-weight: 600; color: #0d2b5e; }
+
+    /* District events */
+    .district-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .district-events { display: flex; flex-wrap: wrap; gap: 8px; }
+    .district-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f4f6f9;
+      border: 1px solid #e5e8ed;
+      border-radius: 20px;
+      padding: 6px 13px;
+      font-size: 13px;
+      color: #1a1a1a;
+    }
 
     /* Contact */
     .contact-block {
@@ -286,6 +313,8 @@
     @media (max-width: 520px) {
       .wrap { margin: 0; border-radius: 0; }
       .pillars, .info-grid, .contact-leaders { grid-template-columns: 1fr; }
+      .event-cards { grid-template-columns: 1fr; }
+      .event-card.wide { grid-column: span 1; }
       .hero h1 { font-size: 26px; }
       .contact-email { font-size: 18px; }
     }
@@ -351,16 +380,43 @@
       </section>
 
       <section class="section">
-        <h2 class="section-title">2025–26 highlights</h2>
-        <ul class="events-list">
-          <li><span class="event-date">Sep 10</span><span class="event-name event-special">District sign-up night — Winstead Cafeteria, 7 PM</span></li>
-          <li><span class="event-date">Sep 20</span><span class="event-name">SOAR Adventure Tower outing</span></li>
-          <li><span class="event-date">Oct 24–26</span><span class="event-name">Fall Cub 'N Family Camping — Boxwell Cubworld</span></li>
-          <li><span class="event-date">Dec 6</span><span class="event-name">Franklin Christmas Parade</span></li>
-          <li><span class="event-date">Feb 14</span><span class="event-name">Scouting for Food</span></li>
-          <li><span class="event-date">Mar TBD</span><span class="event-name">Pinewood Derby</span></li>
-          <li><span class="event-date">Apr TBD</span><span class="event-name">U.S. Space &amp; Rocket Center Campout — Huntsville, AL</span></li>
-        </ul>
+        <h2 class="section-title">2025–26 adventures</h2>
+        <div class="event-cards">
+          <div class="event-card">
+            <div class="event-icon">🏔️</div>
+            <div class="event-card-name">SOAR Adventure Tower</div>
+          </div>
+          <div class="event-card">
+            <div class="event-icon">🏕️</div>
+            <div class="event-card-name">Fall Cub 'N Family Camping — Boxwell Cubworld</div>
+          </div>
+          <div class="event-card">
+            <div class="event-icon">🎄</div>
+            <div class="event-card-name">Franklin Christmas Parade</div>
+          </div>
+          <div class="event-card">
+            <div class="event-icon">🥫</div>
+            <div class="event-card-name">Scouting for Food</div>
+          </div>
+          <div class="event-card">
+            <div class="event-icon">🏎️</div>
+            <div class="event-card-name">Pinewood Derby</div>
+          </div>
+          <div class="event-card">
+            <div class="event-icon">💧</div>
+            <div class="event-card-name">Charity:Water Experience Lab</div>
+          </div>
+          <div class="event-card wide">
+            <div class="event-icon">🚀</div>
+            <div class="event-card-name">U.S. Space &amp; Rocket Center Campout — Huntsville, AL</div>
+          </div>
+        </div>
+        <div class="district-label">Plus District events</div>
+        <div class="district-events">
+          <span class="district-pill">🎯 Shooting Sports Days</span>
+          <span class="district-pill">🏒 Scout Night — Nashville Predators</span>
+          <span class="district-pill">⚾ Scout Night — Nashville Sounds</span>
+        </div>
       </section>
 
       <section class="section">
@@ -375,7 +431,7 @@
               <a class="leader-phone" href="tel:6154965465">(615) 496-5465</a>
             </div>
             <div class="leader">
-              <div class="leader-role">Recruiting Chair</div>
+              <div class="leader-role">Committee Chair</div>
               <div class="leader-name">Keith Tennant</div>
               <a class="leader-phone" href="tel:6156276379">(615) 627-6379</a>
             </div>
