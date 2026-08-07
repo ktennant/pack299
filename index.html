@@ -284,6 +284,16 @@
     display:inline-block;margin-top:28px;font-size:.92rem;font-weight:600;
     color:var(--navy-mid);text-decoration:underline;
   }
+  .leaders{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:32px;
+    margin:26px auto 0;
+  }
+  .leaders .role{
+    font-family:var(--data);font-weight:700;font-size:.68rem;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--navy-mid);
+    display:block;margin-bottom:4px;
+  }
+  .leaders .name{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--navy)}
 
   /* ================= FOOTER ================= */
   footer{background:var(--navy);color:#B9C6DA;padding:44px 0 34px}
@@ -335,7 +345,7 @@
     <div class="section-head">
       <p class="eyebrow">Why Cub Scouts</p>
       <h2>What Scouting Gives Kids</h2>
-      <p>Every month centers on one of the six aims of Scouting &mdash; walked in order, September through April.</p>
+      <p>Every scout works through the six aims of Scouting, in order.</p>
     </div>
 
     <div class="trail">
@@ -343,37 +353,31 @@
         <div class="loop">1</div>
         <b>Character &amp; Leadership</b>
         <p>Make ethical choices and lead with kindness</p>
-        <span class="mo">Sept</span>
       </div>
       <div class="aim">
         <div class="loop">2</div>
         <b>Outdoors</b>
         <p>Explore outdoors &mdash; real trails, real campfires</p>
-        <span class="mo">Oct</span>
       </div>
       <div class="aim">
         <div class="loop">3</div>
         <b>Family &amp; Reverence</b>
         <p>Grow closer as a family, and respect something bigger</p>
-        <span class="mo">Nov</span>
       </div>
       <div class="aim">
         <div class="loop">4</div>
         <b>Personal Safety</b>
         <p>First aid, awareness, and handling the unexpected</p>
-        <span class="mo">Jan</span>
       </div>
       <div class="aim">
         <div class="loop">5</div>
         <b>Citizenship</b>
         <p>Serve others and show up for the community</p>
-        <span class="mo">Feb</span>
       </div>
       <div class="aim">
         <div class="loop">6</div>
         <b>Personal Fitness</b>
         <p>Build active habits through games and the outdoors</p>
-        <span class="mo">Apr</span>
       </div>
     </div>
 
@@ -459,6 +463,10 @@
     <h2>Questions? We'd love to hear them.</h2>
     <a class="email" href="mailto:cubmaster@pack299.com">cubmaster@pack299.com</a>
     <p>One address reaches our whole leadership team &mdash; we typically reply within a couple of days.</p>
+    <div class="leaders">
+      <div><span class="role">Cubmaster</span><span class="name">Ross Lyons</span></div>
+      <div><span class="role">Committee Chair</span><span class="name">Keith Tennant</span></div>
+    </div>
     <a class="members-link" href="members.html">Current members: resources &amp; links &rarr;</a>
   </div>
 </section>
