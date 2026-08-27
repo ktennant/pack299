@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Full Calendar | Cub Scout Pack 299</title>
+<meta name="description" content="Cub Scout Pack 299's full 2026–2027 calendar — outings, campouts, service projects, and registration links.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://pack299.com/calendar.html">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;0,800;1,600;1,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy:#0A2C4F;
+    --navy-mid:#015A9C;
+    --gold:#FFD51E;
+    --gold-pale:#FFF4CC;
+    --paper:#FAF8F3;
+    --ink:#1A1A18;
+    --ink-soft:#4A5464;
+    --rule:#C9D2DE;
+
+    --display:"Bitter",Georgia,"Times New Roman",serif;
+    --body:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif;
+    --data:"Roboto Mono","SFMono-Regular",Consolas,monospace;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:var(--body);
+    color:var(--ink);
+    background:#fff;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:900px;margin:0 auto;padding:0 28px}
+
+  :focus-visible{outline:3px solid var(--navy-mid);outline-offset:3px}
+
+  .eyebrow{
+    font-family:var(--data);font-weight:700;font-size:.72rem;
+    letter-spacing:.18em;text-transform:uppercase;
+  }
+
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--body);font-weight:700;font-size:.9rem;
+    padding:10px 20px;border-radius:3px;text-decoration:none;
+    transition:transform .15s ease, box-shadow .15s ease;
+    border:2px solid transparent;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-gold{background:var(--gold);color:var(--navy);box-shadow:0 3px 0 #C89A00}
+  .btn-gold:hover{box-shadow:0 5px 0 #C89A00}
+  .btn-navy{background:var(--navy);color:#fff}
+
+  /* ================= HEADER ================= */
+  .page-header{background:var(--navy);color:#fff;padding:56px 0 48px;text-align:center}
+  .page-header .eyebrow{color:var(--gold);margin-bottom:14px}
+  .page-header h1{
+    font-family:var(--display);font-weight:800;
+    font-size:clamp(2rem,5vw,2.9rem);letter-spacing:-.01em;margin:0 0 12px;
+  }
+  .page-header p{color:#CBD7E6;max-width:520px;margin:0 auto;font-size:1.02rem}
+  .back-link{
+    display:inline-block;margin-top:22px;font-size:.88rem;font-weight:600;
+    color:var(--gold);text-decoration:underline;
+  }
+
+  /* ================= CALENDAR LIST ================= */
+  .cal{padding:56px 0 88px}
+  .cal-list{border-top:1px solid var(--rule)}
+  .cal-item{
+    display:flex;gap:22px;padding:24px 0;border-bottom:1px solid var(--rule);
+  }
+  .cal-item .when{
+    flex:0 0 120px;
+  }
+  .cal-item .when .mo{
+    font-family:var(--data);font-weight:700;font-size:.72rem;
+    letter-spacing:.1em;text-transform:uppercase;color:#fff;
+    background:var(--navy);display:inline-block;padding:4px 10px;border-radius:3px;
+    margin-bottom:6px;
+  }
+  .cal-item .when .date{
+    display:block;font-family:var(--data);font-weight:700;font-size:.86rem;
+    color:var(--navy-mid);
+  }
+  .cal-item .body{flex:1 1 auto}
+  .cal-item h3{
+    font-family:var(--display);font-weight:800;font-size:1.15rem;
+    color:var(--navy);margin:0 0 4px;
+  }
+  .cal-item .loc{font-size:.92rem;color:var(--ink-soft);margin:0 0 10px}
+  .cal-item .meta-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+  .cal-item .tag{
+    font-family:var(--data);font-weight:700;font-size:.62rem;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
+    border:1px solid var(--rule);border-radius:3px;padding:3px 8px;white-space:nowrap;
+  }
+  .cal-item.featured .tag{background:var(--gold-pale);border-color:var(--gold);color:#6B4A05}
+  .cal-item .register{
+    font-size:.85rem;font-weight:700;color:var(--navy-mid);text-decoration:underline;
+  }
+  .cal-item .note{
+    font-size:.85rem;color:var(--ink-soft);font-style:italic;
+  }
+
+  @media (max-width:600px){
+    .cal-item{flex-direction:column;gap:8px}
+    .cal-item .when{flex:none;display:flex;align-items:center;gap:10px}
+  }
+
+  .cal-footnote{
+    max-width:760px;margin:32px auto 0;color:var(--ink-soft);font-size:.92rem;
+    background:var(--paper);border-left:3px solid var(--gold);padding:14px 18px;border-radius:0 3px 3px 0;
+  }
+
+  /* ================= FOOTER ================= */
+  footer{background:var(--navy);color:#B9C6DA;padding:36px 0;text-align:center}
+  footer .motto{font-family:var(--display);font-style:italic;font-weight:600;color:var(--gold);font-size:.95rem;display:block;margin-bottom:8px}
+  footer a{color:#B9C6DA;text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="wrap">
+    <p class="eyebrow">2026 &ndash; 2027 Program Year</p>
+    <h1>Pack 299 Full Calendar</h1>
+    <p>Every outing on the calendar &mdash; dates, locations, and registration links, updated as they're confirmed. Visiting families are always welcome.</p>
+    <a class="back-link" href="index.html">&larr; Back to Pack 299 home</a>
+  </div>
+</header>
+
+<section class="cal">
+  <div class="wrap">
+    <div class="cal-list">
+
+      <div class="cal-item featured">
+        <div class="when"><span class="mo">Sep</span><span class="date">Thu 17</span></div>
+        <div class="body">
+          <h3>SOAR Adventure Tower</h3>
+          <p class="loc">Open to all Scouts and family</p>
+          <div class="meta-row">
+            <span class="tag">Outing</span>
+            <a class="register" href="https://www.cognitoforms.com/Pack2991/soar26" target="_blank" rel="noopener">Register &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cal-item featured">
+        <div class="when"><span class="mo">Sep</span><span class="date">Sat 19 &middot; 11:00 AM</span></div>
+        <div class="body">
+          <h3>District Range Day</h3>
+          <p class="loc">Archery &amp; BB guns &mdash; Tiger Den (1st grade) and up only</p>
+          <div class="meta-row">
+            <span class="tag">District</span>
+            <a class="register" href="https://www.cognitoforms.com/Pack2991/DistrictRangeDay2026" target="_blank" rel="noopener">Register &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cal-item featured">
+        <div class="when"><span class="mo">Oct</span><span class="date">Fri&ndash;Sun 2&ndash;4</span></div>
+        <div class="body">
+          <h3>Fall Cub &amp; Family Campout</h3>
+          <p class="loc">Boxwell Cubworld &mdash; Lebanon, TN</p>
+          <div class="meta-row">
+            <span class="tag">Campout</span>
+            <span class="note">Registration link coming soon</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cal-item">
+        <div class="when"><span class="mo">Oct</span><span class="date">Date TBD</span></div>
+        <div class="body">
+          <h3>Hike at Bowie Nature Park</h3>
+          <p class="loc">Fairview, TN</p>
+          <div class="meta-row"><span class="tag">Hike</span></div>
+        </div>
+      </div>
+
+      <div class="cal-item featured">
+        <div class="when"><span class="mo">Nov</span><span class="date">Date TBD</span></div>
+        <div class="body">
+          <h3>Council Jamboree</h3>
+          <p class="loc">Boxwell Reservation</p>
+          <div class="meta-row"><span class="tag">Weekend</span></div>
+        </div>
+      </div>
+
+      <div class="cal-item">
+        <div class="when"><span class="mo">Nov</span><span class="date">Date TBD</span></div>
+        <div class="body">
+          <h3>Winstead Grounds Cleanup</h3>
+          <p class="loc">Service at our own school</p>
+          <div class="meta-row"><span class="tag">Service</span></div>
+        </div>
+      </div>
+
+      <div class="cal-item featured">
+        <div class="when"><span class="mo">Dec</span><span class="date">Date TBD</span></div>
+        <div class="body">
+          <h3>Franklin Christmas Parade</h3>
+          <p class="loc">Theme: &ldquo;Santa's Helpers &mdash; Making Spirits Bright&rdquo; &mdash; we build a float and ride in it</p>
+          <div class="meta-row">
+            <span class="tag">Outing</span>
+            <a class="register" href="https://downtownfranklinrotary.com/christmas-parade/" target="_blank" rel="noopener">Parade info &rarr;</a>
+            <span class="note">Volunteers needed &mdash; email cubmaster@pack299.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cal-item">
+        <div class="when"><span class="mo">Jan</span><span class="date">Date TBD</span></div>
+        <div class="body">
+          <h3>Harpeth River Cleanup</h3>
+          <p class="loc">Service on the water</p>
+          <div class="meta-row"><span class="tag">Service</span></div>
+        </div>
+      </div>
+
+      <div class="cal-item">
+        <div class="when"><span class="mo">Feb</span><span class="date">Date TBD</span></div>
+        <div class="body">
+          <h3>Scouting for Food</h3>
+          <p class="loc">Collecting for Graceworks</p>
+          <div class="meta-row"><span class="tag">Service</span></div>
+        </div>
+      </div>
+
+      <div class="cal-item featured">
+        <div class="when"><span class="mo">Apr</span><span class="date">Date TBD</span></div>
+        <div class="body">
+          <h3>Pinewood Derby</h3>
+          <p class="loc">Build a car. Race it. Bring everybody.</p>
+          <div class="meta-row"><span class="tag">Race Day</span></div>
+        </div>
+      </div>
+
+      <div class="cal-item featured">
+        <div class="when"><span class="mo">Apr</span><span class="date">Date TBD</span></div>
+        <div class="body">
+          <h3>Spring Campout</h3>
+          <p class="loc">A new destination every year</p>
+          <div class="meta-row"><span class="tag">Campout</span></div>
+        </div>
+      </div>
+
+      <div class="cal-item">
+        <div class="when"><span class="mo">Sum</span><span class="date">Date TBD</span></div>
+        <div class="body">
+          <h3>Fishing &amp; Canoeing</h3>
+          <p class="loc">Harlinsdale Farm and the Buffalo River</p>
+          <div class="meta-row"><span class="tag">Outing</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="cal-footnote">Dates marked &ldquo;TBD&rdquo; will be confirmed and updated here as they're finalized, along with registration links. Watch for our monthly newsletter on the <a href="members.html" style="color:var(--navy-mid);font-weight:600;">Member Resources</a> page for the latest details.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="motto">Do Your Best. Have Fun. Be a Scout.</span>
+    <span>Cub Scout Pack 299 &middot; Franklin, TN &middot; <a href="mailto:cubmaster@pack299.com">cubmaster@pack299.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
