@@ -2,7 +2,70 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Bundled Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>September Newsletter | Cub Scout Pack 299</title>
+  <meta name="description" content="Pack 299's September newsletter — meeting reminders, den adventures, uniform info, and upcoming events like SOAR Adventure Tower and District Range Day.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://pack299.com/september.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pack299.com/september.html">
+  <meta property="og:title" content="September Newsletter | Cub Scout Pack 299">
+  <meta property="og:description" content="Meeting reminders, den adventures, uniform info, and upcoming events like SOAR Adventure Tower and District Range Day.">
+  <meta property="og:image" content="https://pack299.com/assets/cub-scouts-horizontal.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+
+  <script>
+    // Mobile viewport fix: this page rebuilds its own <head> dynamically
+    // after first paint (see the unpacking script below), which can make
+    // mobile Safari miss the viewport meta tag and render at desktop
+    // width, forcing a pinch-zoom-out to fit. This re-triggers whatever
+    // viewport tag is currently live while the page settles, and falls
+    // back to a CSS scale-to-fit if real content overflow remains.
+    (function(){
+      function nudgeViewport(){
+        var vp = document.querySelector('meta[name="viewport"]');
+        if (!vp) return;
+        var c = vp.getAttribute('content');
+        vp.setAttribute('content', c + ',');
+        vp.setAttribute('content', c);
+      }
+      function fit(){
+        // Reset first so re-measurement (e.g. after rotation) isn't
+        // thrown off by a scale applied on a previous pass.
+        document.body.style.transform = '';
+        document.body.style.width = '';
+        document.documentElement.style.height = '';
+        var vw = (window.visualViewport && window.visualViewport.width) || window.innerWidth;
+        var natural = document.documentElement.scrollWidth;
+        if (natural > vw + 4) {
+          var scale = vw / natural;
+          document.body.style.transformOrigin = 'top left';
+          document.body.style.transform = 'scale(' + scale + ')';
+          document.body.style.width = natural + 'px';
+          document.documentElement.style.height = (document.body.scrollHeight * scale) + 'px';
+          document.documentElement.style.overflowX = 'hidden';
+        }
+      }
+      var tries = 0;
+      var t = setInterval(function(){
+        nudgeViewport();
+        fit();
+        tries++;
+        if (tries > 20) clearInterval(t);
+      }, 300);
+      window.addEventListener('load', fit);
+      var resizeTimer;
+      window.addEventListener('resize', function(){
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(fit, 150);
+      });
+    })();
+  </script>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #0A2C4F; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
