@@ -139,6 +139,17 @@
   .cal-item .register{font-size:.82rem;font-weight:700;color:var(--navy-mid);text-decoration:underline}
   .cal-item .note{font-size:.82rem;color:var(--ink-soft)}
 
+  /* Past events: grayed out, stay in date order */
+  .cal-item.past{opacity:.55}
+  .cal-item.past.featured{background:#F1F1EE;border-left-color:#C9D2DE}
+  .cal-item.past .when{color:#98A0AA}
+  .cal-item.past h3{color:#5B6472}
+  .cal-item.past .tag{filter:grayscale(1)}
+  .past-badge{
+    font-family:var(--data);font-weight:700;font-size:.6rem;
+    letter-spacing:.1em;text-transform:uppercase;color:#98A0AA;
+  }
+
   @media (max-width:600px){
     .cal-item{flex-direction:column;gap:6px}
     .cal-item .when{flex:none}
@@ -210,12 +221,12 @@
         <h2>August 2026</h2>
         <span class="month-label">Kickoff</span>
       </div>
-      <div class="cal-item featured">
+      <div class="cal-item featured" data-date="2026-08-20">
         <div class="when">THU &middot; AUG 20</div>
         <div class="body">
           <h3>District Roundup Night</h3>
           <p class="desc">Our scouting-year kickoff. Interested families learn about Scouting while current Scouts run games for the kids. Bring a friend.</p>
-          <div class="meta-row"><span class="tag tag-district">District</span></div>
+          <div class="meta-row"><span class="tag tag-district">District</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
     </div>
@@ -225,15 +236,15 @@
         <h2>September</h2>
         <span class="aim-tag"><span class="num">1</span>Character &amp; Leadership</span>
       </div>
-      <div class="cal-item">
+      <div class="cal-item" data-date="2026-09-03">
         <div class="when">THU &middot; SEP 3</div>
         <div class="body">
           <h3>Pack &amp; Den Meeting</h3>
           <p class="desc">First meeting of the year. All ranks work on Bobcat adventure. | Opening flag: Arrow of Light</p>
-          <div class="meta-row"><span class="tag tag-meeting">Meeting</span></div>
+          <div class="meta-row"><span class="tag tag-meeting">Meeting</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
-      <div class="cal-item">
+      <div class="cal-item" data-date="2026-09-17">
         <div class="when">THU &middot; SEP 17</div>
         <div class="body">
           <h3>SOAR Adventure Tower</h3>
@@ -241,10 +252,11 @@
           <div class="meta-row">
             <span class="tag tag-outing">Outing</span>
             <a class="register" href="https://www.cognitoforms.com/Pack2991/soar26" target="_blank" rel="noopener">Register &rarr;</a>
+            <span class="past-badge" hidden>Past event</span>
           </div>
         </div>
       </div>
-      <div class="cal-item">
+      <div class="cal-item" data-date="2026-09-19">
         <div class="when">SAT &middot; SEP 19</div>
         <div class="body">
           <h3>District Range Day</h3>
@@ -252,6 +264,7 @@
           <div class="meta-row">
             <span class="tag tag-district">District</span>
             <a class="register" href="https://www.cognitoforms.com/Pack2991/DistrictRangeDay2026" target="_blank" rel="noopener">Register &rarr;</a>
+            <span class="past-badge" hidden>Past event</span>
           </div>
         </div>
       </div>
@@ -262,15 +275,15 @@
         <h2>October</h2>
         <span class="aim-tag"><span class="num">2</span>Outdoors</span>
       </div>
-      <div class="cal-item">
+      <div class="cal-item" data-date="2026-10-01">
         <div class="when">THU &middot; OCT 1</div>
         <div class="body">
           <h3>Pack &amp; Den Meeting</h3>
           <p class="desc">Doubles as the campout briefing &mdash; gear check, buddies, Leave No Trace. Packing lists go out beforehand. | Opening flag: Webelos</p>
-          <div class="meta-row"><span class="tag tag-meeting">Meeting</span></div>
+          <div class="meta-row"><span class="tag tag-meeting">Meeting</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
-      <div class="cal-item featured">
+      <div class="cal-item featured" data-date="2026-10-04">
         <div class="when">FRI&ndash;SUN &middot; OCT 2&ndash;4</div>
         <div class="body">
           <h3>Fall Cub &amp; Family Campout</h3>
@@ -278,15 +291,16 @@
           <div class="meta-row">
             <span class="tag tag-campout">Campout</span>
             <span class="note">Registration link coming soon</span>
+            <span class="past-badge" hidden>Past event</span>
           </div>
         </div>
       </div>
-      <div class="cal-item">
+      <div class="cal-item" data-date="2026-10-24">
         <div class="when">SAT &middot; OCT 24</div>
         <div class="body">
           <h3>Hike at Bowie Nature Park</h3>
           <p class="desc">Fairview, TN</p>
-          <div class="meta-row"><span class="tag tag-outing">Outing</span></div>
+          <div class="meta-row"><span class="tag tag-outing">Outing</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
     </div>
@@ -296,20 +310,20 @@
         <h2>November</h2>
         <span class="aim-tag"><span class="num">3</span>Family &amp; Reverence</span>
       </div>
-      <div class="cal-item">
+      <div class="cal-item" data-date="2026-11-05">
         <div class="when">THU &middot; NOV 5</div>
         <div class="body">
           <h3>Pack &amp; Den Meeting</h3>
           <p class="desc">Also covers Jamboree logistics. | Opening flag: Bears</p>
-          <div class="meta-row"><span class="tag tag-meeting">Meeting</span></div>
+          <div class="meta-row"><span class="tag tag-meeting">Meeting</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
-      <div class="cal-item featured">
+      <div class="cal-item featured" data-date="2026-11-08">
         <div class="when">FRI&ndash;SUN &middot; NOV 6&ndash;8</div>
         <div class="body">
           <h3>Middle Tennessee Council Jamboree</h3>
           <p class="desc">Boxwell Reservation &mdash; Lebanon, TN</p>
-          <div class="meta-row"><span class="tag tag-council">Council</span></div>
+          <div class="meta-row"><span class="tag tag-council">Council</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
       <div class="cal-item tbd">
@@ -328,15 +342,15 @@
         <span class="month-label">Parade Weekend</span>
       </div>
       <p class="month-note">No regular pack meeting this month &mdash; parade weekend is December's activity.</p>
-      <div class="cal-item">
+      <div class="cal-item" data-date="2026-12-04">
         <div class="when">FRI &middot; DEC 4</div>
         <div class="body">
           <h3>Parade Float Prep</h3>
           <p class="desc">All hands. Opening flag: Wolves</p>
-          <div class="meta-row"><span class="tag tag-meeting">Meeting</span></div>
+          <div class="meta-row"><span class="tag tag-meeting">Meeting</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
-      <div class="cal-item featured">
+      <div class="cal-item featured" data-date="2026-12-05">
         <div class="when">SAT &middot; DEC 5</div>
         <div class="body">
           <h3>Franklin Christmas Parade</h3>
@@ -345,6 +359,7 @@
             <span class="tag tag-outing">Outing</span>
             <a class="register" href="https://downtownfranklinrotary.com/christmas-parade/" target="_blank" rel="noopener">Parade info &rarr;</a>
             <span class="note">Volunteers needed &mdash; email cubmaster@pack299.com</span>
+            <span class="past-badge" hidden>Past event</span>
           </div>
         </div>
       </div>
@@ -355,12 +370,12 @@
         <h2>January 2027</h2>
         <span class="aim-tag"><span class="num">4</span>Personal Safety</span>
       </div>
-      <div class="cal-item">
+      <div class="cal-item" data-date="2027-01-07">
         <div class="when">THU &middot; JAN 7</div>
         <div class="body">
           <h3>Pack &amp; Den Meeting</h3>
           <p class="desc">Opening flag: Tigers</p>
-          <div class="meta-row"><span class="tag tag-meeting">Meeting</span></div>
+          <div class="meta-row"><span class="tag tag-meeting">Meeting</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
       <div class="cal-item tbd">
@@ -386,27 +401,27 @@
         <h2>February</h2>
         <span class="aim-tag"><span class="num">5</span>Citizenship</span>
       </div>
-      <div class="cal-item">
+      <div class="cal-item" data-date="2027-02-04">
         <div class="when">THU &middot; FEB 4</div>
         <div class="body">
           <h3>Pack Meeting &mdash; Awards Night</h3>
           <p class="desc">Awards are the centerpiece, with a flag ceremony and citizenship focus. <b>Arrow of Light rank presented.</b> Scouting for Food kicks off &mdash; bags and routes handed out. | Opening flag: Lions</p>
-          <div class="meta-row"><span class="tag tag-meeting">Meeting</span></div>
+          <div class="meta-row"><span class="tag tag-meeting">Meeting</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
-      <div class="cal-item">
+      <div class="cal-item" data-date="2027-02-06">
         <div class="when">SAT &middot; FEB 6</div>
         <div class="body">
           <h3>Scouting for Food &mdash; Bag Distribution</h3>
-          <div class="meta-row"><span class="tag tag-service">Service</span></div>
+          <div class="meta-row"><span class="tag tag-service">Service</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
-      <div class="cal-item">
+      <div class="cal-item" data-date="2027-02-13">
         <div class="when">SAT &middot; FEB 13</div>
         <div class="body">
           <h3>Scouting for Food &mdash; Collection &amp; Sorting</h3>
           <p class="desc">Graceworks. Falls during Mid-Winter Break &mdash; a district date we can't move, so please commit early so we know our headcount.</p>
-          <div class="meta-row"><span class="tag tag-service">Service</span></div>
+          <div class="meta-row"><span class="tag tag-service">Service</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
       <div class="cal-item tbd">
@@ -424,12 +439,12 @@
         <h2>March</h2>
         <span class="month-label">Pinewood Derby Month</span>
       </div>
-      <div class="cal-item">
+      <div class="cal-item" data-date="2027-03-04">
         <div class="when">THU &middot; MAR 4</div>
         <div class="body">
           <h3>Pack Meeting &mdash; Pinewood Derby Prep</h3>
           <p class="desc">Cars handed out and building begins. Spring Break (Mar 15&ndash;19) is your workshop week &mdash; five weeks total before race day. | Opening flag: Webelos</p>
-          <div class="meta-row"><span class="tag tag-meeting">Meeting</span></div>
+          <div class="meta-row"><span class="tag tag-meeting">Meeting</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
       <div class="cal-item tbd">
@@ -447,28 +462,28 @@
         <h2>April</h2>
         <span class="aim-tag"><span class="num">6</span>Personal Fitness</span>
       </div>
-      <div class="cal-item">
+      <div class="cal-item" data-date="2027-04-01">
         <div class="when">THU &middot; APR 1</div>
         <div class="body">
           <h3>Pack &amp; Den Meeting</h3>
           <p class="desc">Opening flag: Bears</p>
-          <div class="meta-row"><span class="tag tag-meeting">Meeting</span></div>
+          <div class="meta-row"><span class="tag tag-meeting">Meeting</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
-      <div class="cal-item featured">
+      <div class="cal-item featured" data-date="2027-04-10">
         <div class="when">SAT &middot; APR 10</div>
         <div class="body">
           <h3>Pinewood Derby Race Day</h3>
           <p class="desc">Our biggest guest-friendly event. Invite grandparents, neighbors, and anyone thinking about joining.</p>
-          <div class="meta-row"><span class="tag tag-outing">Outing</span></div>
+          <div class="meta-row"><span class="tag tag-outing">Outing</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
-      <div class="cal-item featured">
+      <div class="cal-item featured" data-date="2027-04-25">
         <div class="when">FRI&ndash;SUN &middot; APR 23&ndash;25</div>
         <div class="body">
           <h3>Spring Campout</h3>
           <p class="desc">Location announced in the winter.</p>
-          <div class="meta-row"><span class="tag tag-campout">Campout</span></div>
+          <div class="meta-row"><span class="tag tag-campout">Campout</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
     </div>
@@ -478,12 +493,12 @@
         <h2>May</h2>
         <span class="month-label">Year's End</span>
       </div>
-      <div class="cal-item">
+      <div class="cal-item" data-date="2027-05-06">
         <div class="when">THU &middot; MAY 6</div>
         <div class="body">
           <h3>Pack Meeting: Awards and Ceremonies</h3>
           <p class="desc">Rank advancements and end-of-year recognition. Last official meeting of the year. | Opening flag: Wolves</p>
-          <div class="meta-row"><span class="tag tag-meeting">Meeting</span></div>
+          <div class="meta-row"><span class="tag tag-meeting">Meeting</span><span class="past-badge" hidden>Past event</span></div>
         </div>
       </div>
     </div>
@@ -535,6 +550,23 @@
     <span>Cub Scout Pack 299 &middot; Franklin, TN &middot; <a href="mailto:cubmaster@pack299.com">cubmaster@pack299.com</a></span>
   </div>
 </footer>
+
+<script>
+  // Progressive enhancement: gray out events whose date has passed, in place,
+  // so the calendar always reflects today without manual edits each month.
+  (function(){
+    var today = new Date();
+    today.setHours(0,0,0,0);
+    document.querySelectorAll('.cal-item[data-date]').forEach(function(el){
+      var eventDate = new Date(el.getAttribute('data-date') + 'T00:00:00');
+      if (eventDate < today) {
+        el.classList.add('past');
+        var badge = el.querySelector('.past-badge');
+        if (badge) badge.hidden = false;
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>

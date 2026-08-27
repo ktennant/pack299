@@ -240,29 +240,35 @@
   .fact p{margin:0;font-size:.98rem;line-height:1.45}
   @media (max-width:760px){ .facts-grid{grid-template-columns:1fr} }
 
-  /* ================= YEAR AHEAD ================= */
+  /* ================= YEAR AHEAD (highlights) ================= */
   .year{padding:88px 0 96px}
-  .year-list{max-width:760px;margin:0 auto;border-top:1px solid var(--rule)}
-  .yr{
-    display:flex;gap:20px;align-items:baseline;padding:16px 4px;
-    border-bottom:1px solid var(--rule);
+  .highlights-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+    max-width:900px;margin:0 auto;
   }
-  .yr .m{
-    flex:0 0 58px;text-align:center;
-    font-family:var(--data);font-weight:700;font-size:.72rem;
-    letter-spacing:.06em;text-transform:uppercase;color:var(--gold);
-    background:var(--navy);padding:5px 0;border-radius:3px;
+  .hl-card{
+    background:var(--paper);border:1px solid var(--rule);border-radius:4px;
+    padding:20px 20px 22px;position:relative;overflow:hidden;
   }
-  .yr .e b{display:block;font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--navy)}
-  .yr .e span{font-size:.9rem;color:var(--ink-soft)}
-  .yr .tag{
-    margin-left:auto;flex:0 0 auto;align-self:center;
-    font-family:var(--data);font-weight:700;font-size:.62rem;
-    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
-    border:1px solid var(--rule);border-radius:3px;padding:3px 8px;white-space:nowrap;
+  .hl-card::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold);
   }
-  .yr.big .tag{background:var(--gold-pale);border-color:var(--gold);color:#6B4A05}
-  .visit-note{max-width:760px;margin:28px auto 0;color:var(--ink-soft);font-size:.96rem}
+  .hl-card .mo{
+    display:inline-block;font-family:var(--data);font-weight:700;font-size:.68rem;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--gold);
+    background:var(--navy);padding:4px 10px;border-radius:3px;margin-bottom:12px;
+  }
+  .hl-card h3{
+    font-family:var(--display);font-weight:800;font-size:1.12rem;color:var(--navy);
+    margin:0 0 6px;line-height:1.2;
+  }
+  .hl-card p{margin:0;font-size:.9rem;color:var(--ink-soft);line-height:1.45}
+
+  @media (max-width:760px){ .highlights-grid{grid-template-columns:1fr 1fr} }
+  @media (max-width:520px){ .highlights-grid{grid-template-columns:1fr} }
+
+  .year-cta{max-width:760px;margin:36px auto 0;text-align:center}
+  .year-cta p{color:var(--ink-soft);font-size:.95rem;margin:14px 0 0}
 
   /* ================= ROUNDUP CTA ================= */
   .roundup{background:var(--gold);border-top:3px solid var(--navy);border-bottom:3px solid var(--navy)}
@@ -426,24 +432,56 @@
     <div class="section-head">
       <p class="eyebrow">2026 &ndash; 2027</p>
       <h2>The Year Ahead</h2>
+      <p>A few of the highlights &mdash; outings, campouts, and the events families look forward to most.</p>
     </div>
 
-    <div class="year-list">
-      <div class="yr"><span class="m">Sep</span><span class="e"><b>SOAR Adventure Tower</b><span>Ropes courses and climbing</span></span></div>
-      <div class="yr"><span class="m">Sep</span><span class="e"><b>District Range Day</b><span>Archery, BB, and slingshot</span></span></div>
-      <div class="yr big"><span class="m">Oct</span><span class="e"><b>Fall Cub &amp; Family Campout</b><span>Boxwell Cubworld &mdash; Lebanon, TN</span></span><span class="tag">Campout</span></div>
-      <div class="yr"><span class="m">Oct</span><span class="e"><b>Hike at Bowie Nature Park</b><span>Fairview, TN</span></span></div>
-      <div class="yr big"><span class="m">Nov</span><span class="e"><b>Council Jamboree</b><span>Boxwell Reservation</span></span><span class="tag">Weekend</span></div>
-      <div class="yr"><span class="m">Nov</span><span class="e"><b>Winstead Grounds Cleanup</b><span>Service at our own school</span></span></div>
-      <div class="yr big"><span class="m">Dec</span><span class="e"><b>Franklin Christmas Parade</b><span>We build a float and ride in it</span></span><span class="tag">Outing</span></div>
-      <div class="yr"><span class="m">Jan</span><span class="e"><b>Harpeth River Cleanup</b><span>Service on the water</span></span></div>
-      <div class="yr"><span class="m">Feb</span><span class="e"><b>Scouting for Food</b><span>Collecting for Graceworks</span></span></div>
-      <div class="yr big"><span class="m">Apr</span><span class="e"><b>Pinewood Derby</b><span>Build a car. Race it. Bring everybody.</span></span><span class="tag">Race Day</span></div>
-      <div class="yr big"><span class="m">Apr</span><span class="e"><b>Spring Campout</b><span>A new destination every year</span></span><span class="tag">Campout</span></div>
-      <div class="yr"><span class="m">Sum</span><span class="e"><b>Fishing &amp; Canoeing</b><span>Harlinsdale Farm and the Buffalo River</span></span></div>
+    <div class="highlights-grid">
+      <div class="hl-card">
+        <span class="mo">September</span>
+        <h3>SOAR Adventure Tower</h3>
+        <p>Ropes courses and climbing &mdash; open to all Scouts and family.</p>
+      </div>
+      <div class="hl-card">
+        <span class="mo">September</span>
+        <h3>District Range Day</h3>
+        <p>Archery, BB guns, and slingshot &mdash; earned only at district events like this one.</p>
+      </div>
+      <div class="hl-card">
+        <span class="mo">October</span>
+        <h3>Fall Cub &amp; Family Campout</h3>
+        <p>A weekend at Boxwell Cubworld in Lebanon, TN.</p>
+      </div>
+      <div class="hl-card">
+        <span class="mo">November</span>
+        <h3>Council Jamboree</h3>
+        <p>A weekend at Boxwell Reservation with Scouts from across Middle Tennessee.</p>
+      </div>
+      <div class="hl-card">
+        <span class="mo">December</span>
+        <h3>Franklin Christmas Parade</h3>
+        <p>We build a float and ride it through downtown Franklin.</p>
+      </div>
+      <div class="hl-card">
+        <span class="mo">April</span>
+        <h3>Pinewood Derby</h3>
+        <p>Build a car, race it, bring everybody &mdash; our biggest guest-friendly event.</p>
+      </div>
+      <div class="hl-card">
+        <span class="mo">April</span>
+        <h3>Spring Campout</h3>
+        <p>A new destination every year, announced in the winter.</p>
+      </div>
+      <div class="hl-card">
+        <span class="mo">Summer</span>
+        <h3>Fishing at Harlinsdale Farm</h3>
+        <p>Our low-key summer get-together on the water.</p>
+      </div>
     </div>
-    <p class="visit-note">No need to wait for an invitation &mdash; every event on this list is open to visiting families. Come to our first pack meeting, or just show up to any meeting. Email us first and we'll walk you through what to expect.</p>
-    <p class="visit-note"><a href="calendar.html" style="color:var(--navy-mid);font-weight:600;text-decoration:underline;">See exact dates, times, and registration links on the full calendar &rarr;</a></p>
+
+    <div class="year-cta">
+      <a class="btn btn-navy" href="calendar.html">View the Full Calendar &rarr;</a>
+      <p>Every event is open to visiting families &mdash; no invitation needed. The full calendar has exact dates, times, and registration links.</p>
+    </div>
   </div>
 </section>
 
